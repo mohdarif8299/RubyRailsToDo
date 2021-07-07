@@ -12,6 +12,7 @@ class TodoListsController < ApplicationController
 
   # GET /todo_lists/new
   def new
+    puts "new called"
     @todo_list = TodoList.new
   end
 
@@ -21,6 +22,9 @@ class TodoListsController < ApplicationController
 
   # POST /todo_lists or /todo_lists.json
   def create
+
+    puts "create api called"
+
     @todo_list = TodoList.new(todo_list_params)
 
     respond_to do |format|
